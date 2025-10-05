@@ -28,7 +28,42 @@ const quizData = [
      question: "What year was JavaScript launched?",
      options: ["1996", "1995", "1994", "none of the above"],
      answer: "1995",
-  }
+  },
+  {
+     question: "What does API stand for?",
+     options: [ 
+       "Application Programming Interface",
+       "Application Programming Integration",
+       "Advanced Programming Interface",
+       "None of the above"
+     ],
+     answer: "Application Programming Interface",
+  },
+  {
+     question: "Which company developed React?",
+     options: ["Google", "Facebook", "Twitter", "Microsoft"],
+      answer: "Facebook",
+  },
+  {
+     question: "Which of the following is a JavaScript framework?",
+      options: ["Django", "Flask", "React", "Laravel"],
+      answer: "React",
+  },
+  {
+     question: "Which symbol is used for comments in JavaScript?",  
+      options: ["//", "/* */", "#", "<!-- -->"],
+      answer: "//",
+  },
+  {
+     question: "What is the correct way to declare a JavaScript variable?",
+      options: ["var myVar;", "variable myVar;", "v myVar;", "let myVar;"],
+      answer: "var myVar;",
+  },
+  {
+     question: "Which method is used to add an element at the end of an array in JavaScript?",  
+      options: ["push()", "pop()", "shift()", "unshift()"],
+      answer: "push()",
+  }  
 ];
 
 export default quizData;
