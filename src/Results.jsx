@@ -19,9 +19,9 @@ function Results({ score, totalQuestions, restartQuiz, backToHome }) {
   return (
     <div className="flex flex-col items-center justify-center min-h-full bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 p-4">
       <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md text-center animate-fade-in">
-        <div className="text-6xl mb-4">{getEmoji()}</div>
-        <h1 className="text-4xl font-bold mb-4 text-gray-800">Quiz Complete!</h1>
-        <p className="text-2xl mb-4 text-gray-700">You scored {score} out of {totalQuestions}</p>
+        <div className="text-4xl md:text-6xl mb-4">{getEmoji()}</div>
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800">Quiz Complete!</h1>
+        <p className="text-xl md:text-2xl mb-4 text-gray-700">You scored {score} out of {totalQuestions}</p>
         <div className="mb-6">
           <div className="w-full bg-gray-200 rounded-full h-6 mb-2">
             <div

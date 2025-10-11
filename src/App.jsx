@@ -110,12 +110,12 @@ function App() {
         {currentView === 'home' && <Home startQuiz={startQuiz} startDemo={startDemo} />}
         {currentView === 'demo' && (
           <div className="flex flex-col items-center justify-center min-h-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-4">
-            <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-md animate-slide-up">
+            <div className="bg-white p-4 md:p-6 rounded-lg shadow-xl w-full max-w-md animate-slide-up">
               <div className="mb-4">
-                <h1 className="text-2xl font-bold text-gray-800">Demo: BitQuiz</h1>
+                <h1 className="text-xl md:text-2xl font-bold text-gray-800">Demo: BitQuiz</h1>
                 <p className="text-sm text-gray-600">Sample Question {demoIndex + 1} of 3</p>
               </div>
-              <p className="text-lg mb-4 text-gray-800 font-medium">{shuffledQuestions[demoIndex].question}</p>
+              <p className="text-base md:text-lg mb-4 text-gray-800 font-medium">{shuffledQuestions[demoIndex].question}</p>
               <div className="space-y-2">
                 {shuffledQuestions[demoIndex].options.map((option, index) => (
                   <div
@@ -137,11 +137,11 @@ function App() {
         )}
         {currentView === 'quiz' && (
           <div className="flex flex-col items-center justify-center min-h-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-4">
-            <div className="bg-white p-6 rounded-lg shadow-xl w-full max-w-md animate-slide-up">
+            <div className="bg-white p-4 md:p-6 rounded-lg shadow-xl w-full max-w-md animate-slide-up">
               <div className="mb-4">
                 <div className="flex justify-between items-center mb-2">
                   <button onClick={backToHome} className="text-sm text-gray-500 hover:text-gray-700">← Home</button>
-                  <h1 className="text-2xl font-bold text-gray-800">BitQuiz</h1>
+                  <h1 className="text-xl md:text-2xl font-bold text-gray-800">BitQuiz</h1>
                   <div className="text-sm text-gray-600">Score: {score}</div>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
@@ -160,7 +160,7 @@ function App() {
                   {shuffledQuestions[currentQuestion].category || 'General'}
                 </span>
               </div>
-              <p className="text-lg mb-4 text-gray-800 font-medium">{shuffledQuestions[currentQuestion].question}</p>
+              <p className="text-base md:text-lg mb-4 text-gray-800 font-medium">{shuffledQuestions[currentQuestion].question}</p>
               <div className="space-y-2">
                 {shuffledQuestions[currentQuestion].options.map((option, index) => (
                   <button

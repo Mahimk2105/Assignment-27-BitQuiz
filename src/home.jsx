@@ -33,8 +33,8 @@ function Home({ startQuiz, startDemo }) {
   return (
     <div className="flex flex-col items-center justify-center min-h-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-4">
       <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-6xl text-center animate-fade-in">
-        <h1 className="text-5xl font-bold mb-4 text-gray-800 p-6">Welcome to BitQuiz</h1>
-        <p className="text-xl mb-8 text-gray-600">Test your knowledge in web development with our interactive quiz!</p>
+        <h1 className="text-3xl md:text-5xl font-bold mb-4 text-gray-800 p-4 md:p-6">Welcome to BitQuiz</h1>
+        <p className="text-lg md:text-xl mb-8 text-gray-600">Test your knowledge in web development with our interactive quiz!</p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {features.map((feature) => (
