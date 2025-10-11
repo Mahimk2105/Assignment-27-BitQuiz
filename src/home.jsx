@@ -33,10 +33,9 @@ function Home({ startQuiz, startDemo }) {
   return (
     <div className="flex flex-col items-center justify-center min-h-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 p-4">
       <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-6xl text-center animate-fade-in">
-        <h1 className="text-5xl font-bold mb-4 text-gray-800">Welcome to BitQuiz</h1>
+        <h1 className="text-5xl font-bold mb-4 text-gray-800 p-6">Welcome to BitQuiz</h1>
         <p className="text-xl mb-8 text-gray-600">Test your knowledge in web development with our interactive quiz!</p>
 
-        {/* Interactive Features Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {features.map((feature) => (
             <div
@@ -53,7 +52,7 @@ function Home({ startQuiz, startDemo }) {
           ))}
         </div>
 
-        {/* Creative Quiz Preview Section */}
+    
         <div className="mb-8 p-6 bg-gradient-to-r from-indigo-50 to-violet-50 rounded-xl">
           <h2 className="text-3xl font-bold mb-4 text-gray-800">What Makes BitQuiz Special?</h2>
           <div className="flex flex-col md:flex-row items-center gap-6">
@@ -98,14 +97,12 @@ function Home({ startQuiz, startDemo }) {
             ))}
           </div>
         </div>
-
-        {/* Call to Action Buttons */}
         <div className="space-y-4">
           <button
             onClick={startQuiz}
             className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-full w-full md:w-auto transform hover:scale-105 transition-all duration-200 text-xl shadow-lg hover:shadow-xl"
           >
-            🚀 Start Full Quiz (10 Questions)
+            🚀 Start Full Quiz (20 Questions)
           </button>
           <button
             onClick={startDemo}
@@ -115,7 +112,6 @@ function Home({ startQuiz, startDemo }) {
           </button>
         </div>
 
-        {/* Creative Footer Note */}
         <div className="mt-8 p-4 bg-gradient-to-r from-orange-100 to-red-100 rounded-lg">
           <p className="text-gray-700 italic">Ready to challenge yourself? BitQuiz adapts to your learning style with engaging questions and beautiful animations!</p>
         </div>

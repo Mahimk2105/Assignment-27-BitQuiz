@@ -8,4 +8,7 @@
 - [x] Create Navbar.jsx component
 - [x] Create Footer.jsx component
 - [x] Integrate Navbar and Footer in App.jsx
+- [x] Create Results.jsx component for separate results page
+- [x] Add 'results' view to App.jsx state and logic
+- [x] Integrate Results.jsx in App.jsx
 - [x] Run development server and test navigation between views

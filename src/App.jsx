@@ -4,6 +4,7 @@ import './App.css';
 import Navbar from './Navbar.jsx';
 import Footer from './Footer.jsx';
 import Home from './home.jsx';
+import Results from './Results.jsx';
 
 function App() {
   const [shuffledQuestions, setShuffledQuestions] = useState([]);
@@ -52,6 +53,7 @@ function App() {
       setFeedback('');
       setIsAnswered(false);
     } else {
+      setCurrentView('results');
       setShowResults(true);
     }
   };
@@ -66,6 +68,7 @@ function App() {
     setTimer(30);
     setFeedback('');
     setIsAnswered(false);
+    setCurrentView('quiz');
   };
 
   const startQuiz = () => {
@@ -96,36 +99,13 @@ function App() {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-1">
-        {showResults && (
-          <div className="flex flex-col items-center justify-center min-h-full bg-gradient-to-br from-purple-400 via-pink-500 to-red-500 p-4">
-            <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md text-center animate-fade-in">
-              <h1 className="text-4xl font-bold mb-4 text-gray-800">Quiz Results</h1>
-              <p className="text-2xl mb-4 text-gray-700">You scored {score} out of {shuffledQuestions.length}</p>
-              <div className="mb-4">
-                <div className="w-full bg-gray-200 rounded-full h-4">
-                  <div
-                    className="bg-gradient-to-r from-green-400 to-blue-500 h-4 rounded-full transition-all duration-1000"
-                    style={{ width: `${(score / shuffledQuestions.length) * 100}%` }}
-                  ></div>
-                </div>
-                <p className="text-sm text-gray-600 mt-2">{Math.round((score / shuffledQuestions.length) * 100)}% Correct</p>
-              </div>
-              <div className="space-y-2">
-                <button
-                  onClick={restartQuiz}
-                  className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-full transform hover:scale-105 transition-all duration-200 w-full"
-                >
-                  Restart Quiz
-                </button>
-                <button
-                  onClick={backToHome}
-                  className="bg-gradient-to-r from-gray-500 to-gray-600 hover:from-gray-600 hover:to-gray-700 text-white font-bold py-3 px-6 rounded-full transform hover:scale-105 transition-all duration-200 w-full"
-                >
-                  Back to Home
-                </button>
-              </div>
-            </div>
-          </div>
+        {currentView === 'results' && (
+          <Results
+            score={score}
+            totalQuestions={shuffledQuestions.length}
+            restartQuiz={restartQuiz}
+            backToHome={backToHome}
+          />
         )}
         {currentView === 'home' && <Home startQuiz={startQuiz} startDemo={startDemo} />}
         {currentView === 'demo' && (

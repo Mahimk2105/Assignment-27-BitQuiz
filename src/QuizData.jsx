@@ -63,7 +63,58 @@ const quizData = [
      question: "Which method is used to add an element at the end of an array in JavaScript?",  
       options: ["push()", "pop()", "shift()", "unshift()"],
       answer: "push()",
-  }  
+  },
+  {
+     question: "Which HTML element is used to define the title of a document?",
+      options: ["<meta>", "<title>", "<header>", "<head>"],   
+      answer: "<title>",
+  },
+   {
+       question: "Which CSS property is used to change the text color of an element?", 
+         options: ["font-color", "text-color", "color", "font-style"],
+         answer: "color",
+   },
+   {
+       question: "Which HTML attribute is used to define inline styles?",
+         options: ["class", "styles", "style", "font"],        
+         answer: "style",
+   },
+   {
+       question: "Which CSS property controls the text size?",
+         options: ["font-style", "text-size", "font-size", "text-style"],
+         answer: "font-size",
+   },
+   {
+         question: "In CSS, how do you select an element with id 'header'?",
+         options: ["#header", ".header", "header", "*header"],
+         answer: "#header",
+   },
+   {
+         question: "Which HTML element is used to create a hyperlink?",
+         options: ["<link>", "<a>", "<href>", "<hyperlink>"],
+         answer: "<a>",
+   },
+   {
+         question: "Which CSS property is used to change the background color of an element?",
+         options: ["bgcolor", "background-color", "color", "background"],
+         answer: "background-color",
+   },
+   {
+         question: "Which HTML element is used to define a paragraph?",    
+         options: ["<para>", "<p>", "<paragraph>", "<text>"],
+         answer: "<p>",
+   },
+   {
+         question: "Which CSS property is used to make text bold?",
+         options: ["font-weight", "text-bold", "font-style", "text-weight"],
+         answer: "font-weight",
+   },
+   {
+         question: "Which CSS property is used to change the font of an element?",
+         options: ["font-family", "text-font", "font-style", "text-family"],
+         answer: "font-family",
+   }
+
 ];
 
 export default quizData;
